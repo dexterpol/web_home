@@ -1,0 +1,142 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o menu hamburguer */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px auto;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: left 0.3s;
+}
+
+.navbar-menu.active {
+    left: 0;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff6600;
+}
+/* Estilos para a seção similar ao slider */
+/* Estilos para a seção similar ao slider */
+/* Estilos para a seção similar ao slider */
+.similar-slider-area {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Remova a rolagem lateral */
+}
+
+.slider-inner {
+    display: flex;
+    flex-wrap: nowrap; /* Impede que os slides quebrem em várias linhas */
+    scroll-snap-type: x mandatory; /* Define o tipo de rolagem para um movimento de cada vez */
+}
+
+.slide {
+    flex: 0 0 100%; /* Faz cada slide ocupar 100% da largura do contêiner */
+    scroll-snap-align: center; /* Alinha cada slide com o centro da área de rolagem */
+    position: relative; /* Para posicionar o texto */
+}
+
+.slide img {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do slide */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para o texto no centro */
+.camera-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo do bloco de texto */
+    padding: 20px; /* Espaçamento interno do bloco de texto */
+    border-radius: 5px; /* Borda arredondada do bloco de texto */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra do bloco de texto */
+    text-align: center;
+}
+
+.camera-caption h3 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do título */
+    margin-bottom: 10px; /* Espaçamento inferior do título */
+}
+
+.camera-caption p {
+    font-size: 16px; /* Tamanho da fonte do texto */
+    color: #777; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento inferior do texto */
+}
