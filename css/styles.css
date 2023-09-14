@@ -1,142 +1,226 @@
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilos globais */
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Estilos para o menu hamburguer */
+/* Navbar */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #333; /* Cor de fundo da barra de navegação */
 }
 
-.container {
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff; /* Cor do texto do logotipo na barra de navegação */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Cor do ícone do botão de alternância do menu */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important; /* Cor dos links do menu */
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important; /* Cor ao passar o mouse nos links do menu */
+}
+
+/* Banner */
+#inicio {
+    background-image: url("./slider-1.jpg");
+    background-color: #007bff; /* Cor de fundo do banner */
+    color: #fff; /* Cor do texto no banner */
+    padding: 100px 0;
+}
+
+#inicio h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* Galeria */
+#galeria {
+    background-color: #f2f2f2; /* Cor de fundo da seção de galeria */
+    padding: 50px 0;
+}
+
+.galeria-titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.projeto {
+    position: relative;
+    overflow: hidden;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.6); /* Cor da sobreposição com transparência */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.projeto:hover img {
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+.projeto:hover .projeto-overlay {
+    opacity: 1; /* Mostra a sobreposição ao passar o mouse */
+}
+
+/* Estilos para a seção "experiencia-obras" */
+#experiencia-obras {
+    background-color: #f2f2f2; /* Cor de fundo da seção */
+    padding: 50px 0;
+}
+
+#experiencia-obras .container {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+#experiencia-obras h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#experiencia-obras p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#experiencia-obras .col-md-6 {
+    flex: 1; /* Expande as colunas igualmente */
+}
+
+/* Estilos para os contadores de Obras e Clientes */
+#experiencia-obras .contador {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#experiencia-obras .contagem {
+    font-size: 48px;
+    font-weight: 700;
+    color: #007bff; /* Cor do número da contagem */
+}
+
+#experiencia-obras .contador p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333; /* Cor do texto */
+}
+
+#experiencia-obras .row {
+    justify-content: center; /* Centraliza os contadores horizontalmente */
+}
+
+
+/* Estilos para o botão "Saiba Mais" */
+#experiencia-obras .btn-primary {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte do botão */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s ease-in-out; /* Transição suave da cor de fundo */
+
+    /* Efeito de hover */
+    text-decoration: none; /* Remove a decoração de texto padrão */
+}
+
+#experiencia-obras .btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+    color: #fff; /* Cor do texto do botão ao passar o mouse */
+}
+/* Estilize a seção de clientes e o carrossel aqui */
+.clientes {
+    text-align: center;
+    padding: 20px;
+}
+
+.carrossel {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: moveCarrossel 10s linear infinite;
 }
 
-.navbar-brand img {
-    height: 40px;
+
+.cliente img {
+    max-width: 30%;
+    
 }
 
-.nav-toggle {
-    display: none;
+
+
+
+
+
+
+/* Rodapé */
+#contato {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    padding: 50px 0;
 }
 
-.nav-toggle-label {
-    cursor: pointer;
-    padding: 10px 15px;
-    background-color: #333;
-    border-radius: 4px;
+#contato h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-.nav-toggle-label span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px auto;
-    transition: background-color 0.3s, transform 0.3s;
+/* Formulário de Contato */
+.form-control {
+    background-color: #555; /* Cor de fundo dos campos de formulário */
+    color: #fff; /* Cor do texto nos campos de formulário */
+    border-color: #007bff; /* Cor da borda dos campos de formulário */
+    transition: background-color 0.3s ease-in-out;
 }
 
-.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+.form-control::placeholder {
+    color: #888; /* Cor do texto de espaço reservado nos campos de formulário */
 }
 
-.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
-    opacity: 0;
+.form-control:focus {
+    background-color: #777; /* Cor de fundo dos campos de formulário ao focar */
 }
 
-.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+/* Ícones de redes sociais no rodapé */
+.list-inline-item a {
+    color: #fff !important; /* Cor dos ícones de redes sociais */
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
-.navbar-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    transition: left 0.3s;
-}
-
-.navbar-menu.active {
-    left: 0;
-}
-
-.nav-item {
-    margin: 10px 0;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #ff6600;
-}
-/* Estilos para a seção similar ao slider */
-/* Estilos para a seção similar ao slider */
-/* Estilos para a seção similar ao slider */
-.similar-slider-area {
-    background-color: #f8f8f8;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Remova a rolagem lateral */
-}
-
-.slider-inner {
-    display: flex;
-    flex-wrap: nowrap; /* Impede que os slides quebrem em várias linhas */
-    scroll-snap-type: x mandatory; /* Define o tipo de rolagem para um movimento de cada vez */
-}
-
-.slide {
-    flex: 0 0 100%; /* Faz cada slide ocupar 100% da largura do contêiner */
-    scroll-snap-align: center; /* Alinha cada slide com o centro da área de rolagem */
-    position: relative; /* Para posicionar o texto */
-}
-
-.slide img {
-    width: 100%; /* Garante que a imagem ocupe 100% da largura do slide */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Estilos para o texto no centro */
-.camera-caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo do bloco de texto */
-    padding: 20px; /* Espaçamento interno do bloco de texto */
-    border-radius: 5px; /* Borda arredondada do bloco de texto */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra do bloco de texto */
-    text-align: center;
-}
-
-.camera-caption h3 {
-    font-size: 24px; /* Tamanho da fonte do título */
-    color: #333; /* Cor do título */
-    margin-bottom: 10px; /* Espaçamento inferior do título */
-}
-
-.camera-caption p {
-    font-size: 16px; /* Tamanho da fonte do texto */
-    color: #777; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento inferior do texto */
+.list-inline-item a:hover {
+    color: #007bff !important; /* Cor ao passar o mouse sobre os ícones de redes sociais */
 }

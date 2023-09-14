@@ -1,63 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Obras e Reformas</title>
+    <!-- Link para a fonte Google "Montserrat" -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Adicione o link para o Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
 </head>
 <body>
-   <header>
-    <nav class="navbar" id="main_navbar">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
-
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-            </label>
-
-            <ul class="navbar-menu">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">Nome da Empresa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#anos">+10 Anos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    </header>
-    <section class="similar-slider-area" id="slider">
-        <div class="slider-inner">
-            <div class="slide">
-                <img src="./imagens/slider-1.jpg" alt="Slide 1">
-                <div class="camera-caption">
-                    <div class="container">
-                        <h5 class="wow fadeInUp animated">Welcome to our</h5>
-                        <h3 class="wow fadeInUp animated" data-wow-delay="0.5s">ANOTHER SECTION TITLE</h3>
-                        <p class="wow fadeInUp animated" data-wow-delay="0.8s">This is a brief description of this section. You can add more content here to describe the services or features of your website.</p>
-                        <a class="wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
-                    </div>
+    <!-- Banner atualizado -->
+    <header id="inicio" class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h1>Bem-vindo à Nossa Empresa de Obras e Reformas</h1>
+                    <p>Transformando suas ideias em realidade.</p>
                 </div>
             </div>
-            <div class="slide">
-                <img src="./imagens/slider-1.jpg" alt="Slide 2">
-                <div class="camera-caption">
-                    <div class="container">
-                        <h5 class="wow fadeInUp animated">Welcome to our</h5>
-                        <h3 class="wow fadeInUp animated" data-wow-delay="0.5s">YET ANOTHER SECTION TITLE</h3>
-                        <p class="wow fadeInUp animated" data-wow-delay="0.8s">This is another brief description of this section. You can add more content here to highlight different aspects of your website.</p>
-                        <a class="wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
+        </div>
+    </header>
+
+    <!-- Galeria com retângulos nos projetos -->
+    <section id="galeria" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nossa Galeria de Projetos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="projeto">
+                        <img src="./imagens/casa_cgn.jpg" alt="Projeto 1" class="img-fluid">
+                        <div class="projeto-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="projeto">
+                        <img src="./imagens/casa_cgn.jpg" alt="Projeto 2" class="img-fluid">
+                        <div class="projeto-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="projeto">
+                        <img src="imagens/casa_cgn.jpg" alt="Projeto 3" class="img-fluid">
+                        <div class="projeto-overlay"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <button id="prevButton">Previous</button>
-        <button id="nextButton">Next</button>
+    </section>
+
+    <section id="experiencia-obras" class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Seção "+10 Anos de Experiência" -->
+                <div class="col-md-6">
+                    <h2>+10 Anos de Experiência</h2>
+                    <p>Somos uma empresa baseada na Bahia, especializada em serviços de reforma de casas, prédios e muito mais. Com mais de uma década de experiência, entregamos projetos de alta qualidade, transformando suas ideias em realidade.</p>
+                    <!-- Botão para mais informações -->
+                    <a href="sua_pagina_de_experiencia.html" class="btn btn-primary">Saiba Mais</a>
+                </div>
+    
+                <!-- Seção "Obras Realizadas" -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contador">
+                                <span class="contagem" data-count="100">0</span>+
+                                <p>Obras</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contador">
+                                <span class="contagem" data-count="1000">0</span>+
+                                <p>Clientes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Adicione uma imagem ou ícone relacionado às obras aqui -->
+                    <img src="obras.png" alt="Obras" class="img-fluid">
+                </div>
+            </div>
+        </div>
     </section>
     
     
+    <!-- Seção de Clientes em Carrossel -->
+    <section class="clientes">
+        <h2>Nossos Clientes</h2>
+        <div class="carrossel">
+            <div class="cliente">
+                <img src="./imagens/31530356_bird_2.jpg" alt="Cliente 1" width=30% >
+            </div>
+            <div class="cliente">
+                <img src="./imagens/31530356_bird_2.jpg" alt="Cliente 2" width=30%>
+            </div>
+            <div class="cliente">
+                <img src="./imagens/31530356_bird_2.jpg" alt="Cliente 3" width=30%>
+            </div>
+            <div class="cliente">
+                <img src="./imagens/31530356_bird_2.jpg" alt="Cliente 3" width=30%>
+            </div>
+            <div class="cliente">
+                <img src="./imagens/31530356_bird_2.jpg" alt="Cliente 3" width=30%>
+            </div>
+            <!-- Adicione mais clientes aqui -->
+        </div>
+    </section>
+    
+
+    <!-- Rodapé atualizado -->
+    <footer id="contato" class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Entre em Contato</h3>
+                    <!-- Adicione um formulário de contato aqui, se necessário -->
+                </div>
+                <div class="col-md-6">
+                    <h3>Redes Sociais</h3>
+                    <!-- Adicione ícones e links para as redes sociais aqui -->
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+    
